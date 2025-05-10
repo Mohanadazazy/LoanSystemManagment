@@ -54,18 +54,18 @@ namespace Persistence
                 await userManager.AddToRoleAsync(user2, "User");
             }
 
-            if (!context.Loans.Any())
-            {
-                var loan = new Loan()
-                {
-                    Amount = 2000,
-                    BorrowerId = "925fc1e6-5c9e-4969-bcad-1be2169d2e1f",
-                    LenderId = "95457d32-a933-41cc-b44a-6f737b1bbbd1",
-                    DueDate = DateTime.Parse("5/12/2025"),
-                };
-                await context.AddAsync(loan);
-                await context.SaveChangesAsync();
-            }
+            //if (!context.Loans.Any())
+            //{
+            //    var loan = new Loan()
+            //    {
+            //        Amount = 2000,
+            //        BorrowerId = "925fc1e6-5c9e-4969-bcad-1be2169d2e1f",
+            //        LenderId = "95457d32-a933-41cc-b44a-6f737b1bbbd1",
+            //        DueDate = DateTime.Parse("5/12/2025"),
+            //    };
+            //    await context.AddAsync(loan);
+            //    await context.SaveChangesAsync();
+            //}
         }
     }
 }
