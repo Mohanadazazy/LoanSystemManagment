@@ -21,7 +21,7 @@ namespace Services.Abstraction
 
         public Task<LoanResultDto> AddLoanAsync(AddLoanDto loan);
 
-        public void UpdateLoan(LoanResultDto loan);
+        public Task UpdateLoan(UpdateDto loan);
 
         public Task<decimal> GetTotalAmountBorrowedLoanAsync(string userId);
         public Task<decimal> GetTotalAmountLendedLoanAsync(string userId);

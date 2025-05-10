@@ -20,6 +20,8 @@ namespace Services.MappingProfiles
 
             CreateMap<Loan, AddLoanDto>().ReverseMap();
 
+            CreateMap<Loan,UpdateDto>().ReverseMap();
+
         }
     }
 }

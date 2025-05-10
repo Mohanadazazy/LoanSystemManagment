@@ -57,10 +57,10 @@ namespace Persistence.Repositories
             return await _context.Loans.Where(U => U.LenderId == userId).SumAsync(U => U.Amount);
         }
 
-        public void UpdateLoan(Loan loan)
+        public async Task UpdateLoan(Loan loan)
         {
            _context.Loans.Update(loan);
-           _context.SaveChanges();
+           await _context.SaveChangesAsync();
         }
     }
 }

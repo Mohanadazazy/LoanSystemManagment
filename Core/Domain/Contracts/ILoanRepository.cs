@@ -15,7 +15,7 @@ namespace Domain.Contracts
 
         public Task<Loan?> GetLoanByIdAsync(Guid id); 
         public Task<Loan> AddLoanAsync(Loan loan);
-        public void UpdateLoan(Loan loan);
+        public Task UpdateLoan(Loan loan);
 
         public Task<decimal> GetTotalAmountOfBorrowedLoansByUserIdAsync(string userId);
         public Task<decimal> GetTotalAmountOfLendedLoansByUserIdAsync(string userId);

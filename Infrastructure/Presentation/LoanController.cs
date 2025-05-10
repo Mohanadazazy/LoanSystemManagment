@@ -43,9 +43,9 @@ namespace Presentation
         }
 
         [HttpPut]
-        public IActionResult UpdateLoan(LoanResultDto loanResultDto)
+        public async Task<IActionResult> UpdateLoan(UpdateDto loanResultDto)
         {
-            serviceManager.LoanService.UpdateLoan(loanResultDto);
+            await serviceManager.LoanService.UpdateLoan(loanResultDto);
             return NoContent();
         }
 

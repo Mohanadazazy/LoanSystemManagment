@@ -58,10 +58,10 @@ namespace Services
             
         }
 
-        public void UpdateLoan(LoanResultDto loan)
+        public async Task UpdateLoan(UpdateDto loan)
         {
             var loanResult = _mapper.Map<Loan>(loan);
-            _unitOfWork.loanRepository.UpdateLoan(loanResult);
+            await _unitOfWork.loanRepository.UpdateLoan(loanResult);
         }
 
         public async Task<decimal> GetTotalAmountBorrowedLoanAsync(string userId)

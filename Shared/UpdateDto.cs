@@ -7,17 +7,17 @@ using Domain.Models;
 
 namespace Shared
 {
-    public class LoanResultDto
+    public class UpdateDto
     {
-        public Guid Id { get; set; } 
+        public Guid Id { get; set; }
         public decimal Amount { get; set; }
 
         public DateTime CreateAt { get; set; }
 
         public DateTime DueDate { get; set; }
-        
 
-        
+
+
 
         public string Status
         {
@@ -44,12 +44,11 @@ namespace Shared
         }
 
 
-        public string LenderId { get; set; }   
+        public string LenderId { get; set; }
 
         public string? BorrowerId { get; set; }
 
-        public string? LenderName { get; set; }
-        public string BorrowerName { get; set; }
+       
 
         public decimal PaidAmount { get; set; } = 0;
     }
